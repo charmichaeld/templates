@@ -33,8 +33,4 @@ SYNOPSIS
          DNA-seq           ALIGN             BWA_0.5.9_aln      paired end      run_bwa0.5.9_aln_pe.sh
          RNA-seq           VARIANT CALLING   STAR|GATK|snpEff   1 se lib        run_rna_seq_snpEff.sh
 
-LICENSE
-    This is released under the Artistic License 2.0. See perlartistic.
 
-AUTHOR
-    Michael Dickens cmdickens@gmail.com
