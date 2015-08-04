@@ -42,7 +42,7 @@ my $scroll_screen_on_clear = 0;
 ###############################################################################
 
 my $menu_title_colors = 'bold white on_magenta';
-my $menu_item_colors = 'white on_blue';
+my $menu_item_colors = 'bold white on_blue';
 
 my $usage = qq{
 Synopsis:
@@ -234,7 +234,7 @@ sub print_menu {
             my $copy_message = "  Copy $menu_titles{$menu_levels} to current directory?  ";
             $trailing_spaces = '';
             $trailing_spaces .= ' ' foreach (1 .. ($max_row_length - length($copy_message)));
-            printf("\n\n\t%s", colored("$copy_message$trailing_spaces      ", 'white on_cyan'));
+            printf("\n\n\t%s", colored("$copy_message$trailing_spaces      ", 'bold white on_cyan'));
             $menu_items{'y'} = $menu_item;
         }
         else {
@@ -255,18 +255,18 @@ sub print_menu {
     }
 
     if ($level == 0) {
-        printf("\n\n\n\n\t%s", colored(' q  quit ', 'white on_red'));
+        printf("\n\n\n\n\t%s", colored(' q  quit ', 'bold white on_red'));
     }
     else {
         if ($level == ($menu_levels - 1)) {
-            printf("\n\t%s", colored(' y  yes  ', 'white on_cyan'));
-            printf("\n\t%s", colored(' b  back ', 'white on_green'));
+            printf("\n\t%s", colored(' y  yes  ', 'bold white on_cyan'));
+            printf("\n\t%s", colored(' b  back ', 'bold white on_green'));
         }
         else {
-            printf("\n\n\t%s", colored(' b  back ', 'white on_green'));
+            printf("\n\n\t%s", colored(' b  back ', 'bold white on_green'));
         }
-        printf("\n\t%s",   colored(' h  home ', 'white on_green'));
-        printf("\n\t%s",   colored(' q  quit ', 'white on_red'));
+        printf("\n\t%s",   colored(' h  home ', 'bold white on_green'));
+        printf("\n\t%s",   colored(' q  quit ', 'bold white on_red'));
     }
     printf("\n\n%s",   colored("  Select:", 'bold green on_black'));
     return 1;
